@@ -1,11 +1,16 @@
 {
   "name": "start-graphql-microservice",
-  "module": "index.ts",
   "type": "module",
   "private": true,
   "workspaces": [
     "apps/*"
   ],
+  "scripts": {
+    "dev": "bun --filter '@start-graphql-microservice/*' dev",
+    "dev:auth": "bun --filter '@start-graphql-microservice/auth' dev",
+    "dev:organization": "bun --filter '@start-graphql-microservice/organization' dev",
+    "build": "bun --filter '@start-graphql-microservice/*' build"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

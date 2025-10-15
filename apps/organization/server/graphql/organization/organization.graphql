@@ -1,0 +1,19 @@
+type Organization {
+  id: ID!
+  name: String!
+  description: String
+  createdAt: String!
+}
+
+input CreateOrganizationInput {
+  name: String!
+  description: String
+}
+
+type Query {
+  getOrganization(id: ID!): Organization
+}
+
+type Mutation {
+  createOrganization(input: CreateOrganizationInput!): Organization!
+}

@@ -8,5 +8,5 @@ export default defineNitroConfig({
     federation: {
       enabled: true,
     }
-  },
+  }
 });
